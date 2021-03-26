@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle  } from "reactstrap";
-import DishDetailComponent from './DishDetailComponent';
 
 class Menu extends Component{
 
-    constructor(props){
-        super(props);
+    componentDidMount(){
+        console.log("Menu Component did mount invoked!!");
     }
-
     onDishSelect(dish){
 
         this.setState({
@@ -36,6 +34,8 @@ class Menu extends Component{
 
 
     render(){
+        console.log("Menu Component render invoked!!");
+
         const menu = this.props.dishes.map((dish) => {
             return (
                 <div key={ dish.id } className="col-12 col-md-5 m-1">    

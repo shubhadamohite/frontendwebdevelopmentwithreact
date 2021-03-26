@@ -3,6 +3,12 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
 
 class DishDetailComponent extends Component{
 
+    componentDidMount(){
+        console.log("Dish Detail Component did mount invoked!!");
+    }
+    componentDidUpdate(){
+        console.log("Dish Detail Component did update invoked!!");
+    }
     renderDish(dish) { /*function to render the cards on the screen */
 
         if (dish != null) {
@@ -57,9 +63,9 @@ class DishDetailComponent extends Component{
 
 
     render(){
-        const dish = this.props.dish
+        console.log("Dish Detail Component render invoked!!");
 
-        console.log("inside DD"+dish);
+        const dish = this.props.dish
         
         if (dish == null) {
             return (<div></div>);
